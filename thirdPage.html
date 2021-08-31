@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>thirdPage</title>
+      <link rel="stylesheet" href="thirdPage.css">
+      <script src="thirdPage.js" charset="utf-8"></script>
+      <script src="lory.min.js"></script>
+      <script src="thirdPage2.js" charset="utf-8"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+		  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+</head>
+<body>
+
+  <nav>
+    <span id="brand">
+          <a href="secondPage.html">DEVEWORKING</a>
+    </span>
+
+    <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="secondPage.html">MANGA</a></li>
+          <li><a href="fourthPage.html">AKIBHAARA</a></li>
+          <li><a href="#">FAQ</a></li>
+    </ul>
+
+    <div id="toggle">
+          <div class="span" id="one"></div>
+          <div class="span" id="two"></div>
+          <div class="span" id="three"></div>
+    </div>
+  </nav>
+
+  <div id="resize">
+    <ul id="menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="secondPage.html">MANGA</a></li>
+          <li><a href="fourthPage.html">AKIHABARA</a></li>
+          <li><a href="fifthPage.html">OUR TEAM</a></li>
+    </ul>
+  </div>
+
+  <div class="title-big">
+    <h1>ANIME</h1>
+  </div>
+
+<div class="total-collapse">
+  <div class="acc-toggle" data-collapse="">
+      <div class="acc-block">
+        <div class="acc-no">1</div>
+        <div class="acc-title">You have already seen them</div>
+        <div class="acc-toggle-icon">
+          <ion-icon name="add-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li>
+        Have you ever noticed a lot of cars of a certain model only after you or someone you know has bought it, whereas before you didn't even see them? <br>
+        Well, this is exactly the same thing. If you were born in the 80's or later, you must have seen an anime on TV.<br>
+        Most probably without even realizing it. You know those cartoons you watched as a kid on TV before school: <br>
+        Saylor Moon, Holly and Benji, Dragon Ball and Rossana? That's it, they're all Japanese anime.
+      </li>
+
+    </ul>
+
+    <div class="acc-toggle" data-collapse="">
+      <div class="acc-block">
+        <div class="acc-no">2</div>
+        <div class="acc-title">What is an anime</div>
+        <div class="acc-toggle-icon">
+          <ion-icon name="add-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li>
+        The term anime is derived from animēshon, the translation of animation into English.<br>
+        Anime is both a commercial entertainment product, a mass popular cultural phenomenon and a technological <br>
+        art form that is produced for different audiences such as children, teenagers and adults. <br>
+        Japan's anime formats are commonly referred to as TV anime (TVA), original video anime (OVA), movie and NET anime (NETA).
+        So basically an anime is an animation of a manga or light novel, therefore a frametisation of drawings made by hand with sometimes the use of cgi,<br>
+         which consists of a software that simulates through the computer movements too complex to make by hand.
+      </li>
+
+    </ul>
+
+    <div class="acc-toggle" data-collapse="">
+      <div class="acc-block">
+        <div class="acc-no">3</div>
+        <div class="acc-title">Short history of anime</div>
+        <div class="acc-toggle-icon">
+          <ion-icon name="add-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li>
+  The first anime to be released on television was "Tetsuwan Atom" (Astro Boy) by Osamu Tezuka in 1963 and lasted 193 episodes of 30 minutes each. <br>
+  It was after the first half of the sixties that the animation industry boomed: production studios multiplied, <br>
+  techniques became more and more refined, and private television stations, as well as the state television NHK, progressively increased their demand for animated series.<br>
+  In addition, from the beginning and more and more often, anime characters were exploited for advertising purposes, followed by the birth of merchandising gadgets and models.
+      </li>
+
+    </ul>
+
+    <div class="acc-toggle" data-collapse="">
+      <div class="acc-block">
+        <div class="acc-no">4</div>
+        <div class="acc-title">Where to watch anime (ITA)</div>
+        <div class="acc-toggle-icon">
+          <ion-icon name="add-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li>
+  There are many ways to watch anime, such as Netflix, TV, paid sites, or the most popular but not recommended for legal reasons, free streaming sites.<br>
+  Examples of free streaming sites include AnimesaturyAnimeunity, Animeworld and many others. Instead for platforms that hold the rights to anime and are therefore legal,<br>
+  we can mention Crunchyroll, VVVID and Yamato Animation. A tip to start watching anime is to see those that are a bit mainstream but not at the level of Dragonball.<br>
+  I'm talking about anime like Attack On Titan and Sword Art Online, and then move on to titles that are a bit more sophisticated.
+      </li>
+
+    </ul>
+
+</div>
+
+		<script>
+			let parent = document.querySelectorAll("[data-collapse");
+			parent.forEach((element) => {
+				let clickTarget = element.querySelector("*");
+				let collapseElement = element.nextElementSibling;
+				let collapseElementChildren = collapseElement.children;
+				let tl = new TimelineMax({
+					reversed: true,
+					paused: true,
+				});
+
+				tl.from(
+					collapseElement,
+					1.6,
+					{
+						className: "+=heightZero",
+						ease: Expo.easeInOut,
+					},
+					"open"
+				);
+				tl.staggerFrom(
+					collapseElementChildren,
+					1,
+					{
+						autoAlpha: 0,
+						y: "40%",
+						ease: Expo.easeInOut,
+					},
+					0.08,
+					"open+=.1"
+				);
+
+				clickTarget.addEventListener("click", () => {
+					tl.reversed() ? tl.play() : tl.reverse();
+				});
+			});
+		</script>
+
+        <script>
+     $("#toggle").click(function() {
+
+     $(this).toggleClass('on');
+     $("#resize").toggleClass("active");
+     });
+     </script>
+</body>
+
+</html>

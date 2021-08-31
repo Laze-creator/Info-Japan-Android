@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Block Reveal Effect On Scroll</title>
+        <link rel="stylesheet" href="secondPage.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900" rel="stylesheet">
+    </head>
+    <body>
+        <div class="smooth-scroll-wrapper">
+          <nav>
+            <span id="brand">
+                  <a href="secondPage.html">DEVEWORKING</a>
+            </span>
+
+            <ul id="menu">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="#">ANIME</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">OUR TEAM</a></li>
+            </ul>
+
+            <div id="toggle">
+                  <div class="span" id="one"></div>
+                  <div class="span" id="two"></div>
+                  <div class="span" id="three"></div>
+            </div>
+      </nav>
+
+      <div id="resize">
+            <ul id="menu">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="ThirdPage.html">ANIME</a></li>
+                  <li><a href="fourthPage.html">AKIHABARA</a></li>
+                  <li><a href="fifthPage.html">OUR TEAM</a></li>
+            </ul>
+      </div>
+            <div class="content">
+                 <div class="title-page">
+                   <h1>I MANGA</h1>
+                 </div>
+                <div class="container">
+                    <h1 class="text">Kinds of anime and manga</h1>
+                    <div class="img">
+                        <img src="img-one.jpg" alt="" />
+                    </div>
+                    <p class="text">
+                      There are different types of short stories, and according to these they are grouped in different groups: <br>
+                      Light novels, web novels, manga (Japan) and manwa (Korea). <br>
+                      We can also find subgroups that are divided by genre: <br>
+                      Kodomo - anime and manga for children <br>
+                      Shonen - for boys <br>
+                      Shojo - for girls <br>
+                      Majokko - shojo with wizards <br>
+                      Seinen - for mature boys <br>
+                      Josei - shojo for mature girls <br>
+                      Yaoi / Yuri - homoerotic explicitly sexual content, in the first case male and in the second case female. <br>
+                      Ecchi - fairly light erotic elements.
+                      Hentai - sometimes uncensored sexual elements <br>
+                      Romantic Comedy - as the name implies these are romantic comedies.
+                      Mecha - fights between giant robots <br>
+                      Spokon - a work about a sport.
+                      Isekai - a work in which the protagonist is catapulted into another world.
+                    </p>
+                </div>
+                <div class="container">
+                    <h1 class="text"> Comics or manga?</h1>
+                    <div class="img">
+                        <img src="img-two.jpg" alt="" />
+                    </div>
+                    <p class="text">
+                      Japanese manga are the equivalent of comic books in the West, the only difference is that they are produced in Japan and are drawn with a particular technique.
+                      You may have thought of comics like Bat Man or the Avengers but we are talking about two different things,
+                      but for now, let's focus on their history.
+                    </p>
+                </div>
+
+                <div class="container">
+                    <h1 class="text">La storia</h1>
+                    <div class="img">
+                        <img src="img-three.jpg" alt="" />
+                    </div>
+                    <p class="text">
+                      The term manga (漫画) literally means derisive images and in Japan identifies all drawings made in the form of comic strips.
+                      Its origin dates back to the 18th century and is exemplified in the illustration book Shiji no yukikai by Santo Kyoden and in Hyakujo by Aikawa Minwa:
+                      We are in the middle of the Edo period, in a context with a strong traditionalist component.
+                      The first to use the term manga to define some of his productions was, however, the famous artist Hokusai, who lived between 1760 and 1849.
+                      Note: Manga is not the only word used in Japan to indicate comics, although it is the most commonly used: there are also toba-e and ponchi-e.
+                    </p>
+                </div>
+                <div class="container">
+                    <h1 class="text">How to read a manga?</h1>
+                    <div class="img">
+                    </div>
+                    <p class="text">
+                      <img src="ordine-tavole.png" alt="" />
+                      The content of manga, before being published in the latter, is presented in volumes of about 200 pages called tankōbon.
+                      Some examples are Weekly Shounen Jump and Shonen Magazine.
+                      It is very important to know that manga, unlike western comics, should be read from right to left, including the panels (vignettes),
+                      which should be read as in the picture opposite.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const body = document.body,
+                scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+                height = scrollWrap.getBoundingClientRect().height - 1,
+                speed = 0.04;
+
+            var offset = 0;
+
+            body.style.height = Math.floor(height) + "px";
+
+            function smoothScroll() {
+                offset += (window.pageYOffset - offset) * speed;
+
+                var scroll = "translateY(-" + offset + "px) translateZ(0)";
+                scrollWrap.style.transform = scroll;
+
+                callScroll = requestAnimationFrame(smoothScroll);
+            }
+
+            smoothScroll();
+
+            $(function () {
+                var elements = $(".text, .img").toArray();
+                $(window).scroll(function () {
+                    elements.forEach(function (item) {
+                        if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                            $(item).addClass("reveal");
+                        }
+                    });
+                });
+                elements.forEach(function (item) {
+                    if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                        $(item).addClass("reveal");
+                    }
+                });
+            });
+        </script>
+
+        <script>
+
+     $("#toggle").click(function() {
+
+     $(this).toggleClass('on');
+     $("#resize").toggleClass("active");
+
+     });
+     </script>
+    </body>
+</html>

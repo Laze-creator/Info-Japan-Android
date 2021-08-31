@@ -1,0 +1,236 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+}
+
+body {
+      color: #fff;
+      background: url(hero.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      overflow-x: hidden;
+}
+
+#wrap {
+      width: 980px;
+      left: -490px;
+      top: 6%;
+      margin-top: 50px;
+      margin-left: 50%;
+      position: relative;
+
+
+}
+
+.name-arrow
+{
+  margin-top: 200px;
+}
+
+#showcase {
+      width: 100%;
+      height: 400px;
+}
+
+#showcase img {
+      cursor: pointer;
+      opacity: 1;
+      height: 85%;
+      weight: 200%;
+}
+.name
+{
+  margin-top: 40px;
+}
+
+#item-title {
+      color: #fff;
+      font-size: 30px;
+      letter-spacing: 0.13em;
+      text-align: center;
+      margin-top: -20px;
+      margin-bottom: 32px;
+      font-family: monospace;
+}
+
+.nav {
+      text-align: center;
+}
+
+.nav > button {
+      width: 60px;
+      height: 60px;
+      color: #fff;
+      text-align: center;
+      background: #000;
+      border: none;
+      cursor: pointer;
+}
+
+.nav > button:focus {
+      border: none;
+      outline: none;
+}
+
+nav {
+      width: 100%;
+      background: #003153;
+      height: 70px;
+      position: static;
+      z-index: 1;
+
+}
+
+nav #brand {
+      float: left;
+      display: block;
+      margin-left: 84px;
+      font-size: 30px;
+      line-height: 70px;
+      font-weight: bold;
+}
+
+nav #brand a {
+      color: #fff;
+      transition: all 0.3s ease-out;
+      font-family: "Poppins";
+      font-weight: 300;
+      text-decoration: none;
+}
+
+nav #menu {
+      float: left;
+      left: 50%;
+      position: relative;
+}
+
+nav #menu li {
+      display: inline-block;
+      padding: 0px 30px;
+      cursor: pointer;
+      line-height: 70px;
+      position: relative;
+      transition: all 0.3s ease-out;
+}
+
+nav #menu li a {
+      color: #fff;
+      font-family: "Poppins";
+      font-weight: 200;
+      font-size: 20px;
+      text-decoration: none;
+}
+
+#toggle {
+      position: absolute;
+      right: 20px;
+      top: 14px;
+      z-index: 999;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+}
+
+#toggle .span {
+      height: 3px;
+      background: #fff;
+      transition: all 0.3s ease-out;
+      backface-visibility: hidden;
+      margin: 5px auto;
+}
+
+#toggle.on #one {
+      transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+#toggle.on #two {
+      opacity: 0;
+}
+
+#toggle.on #three {
+      transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#resize {
+      z-index: 1;
+      top: 0px;
+      position: absolute;
+      background: #003153;
+      width: 100%;
+      height: 10%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+      display: table;
+}
+
+#resize #menu {
+      height: 90px;
+      display: table-cell;
+      vertical-align: center;
+      padding-left: 0px;
+}
+
+#resize #menu li {
+      display: block;
+      text-align: center;
+      padding: 70px 0;
+      font-size: 50px;
+      min-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+      margin-top:10px;
+}
+
+#resize #menu li a {
+      color: #fff;
+      text-decoration: none;
+}
+
+#resize.active {
+      visibility: visible;
+      opacity: 0.99;
+}
+
+
+@media(max-width: 768px) {
+      #toggle {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 6px;
+      }
+
+
+      }
+
+      nav #brand {
+            margin-left: 18px;
+      }
+
+      #menu a {
+            font-family: "Poppins";
+            font-weight: 200;
+            font-size: 30px;
+            text-align: center;
+      }
+
+      nav #menu {
+            display: none;
+      }
+}
+
+@media(min-width: 768px) {
+      #resize {
+            visibility: hidden !important;
+      }
+
+}

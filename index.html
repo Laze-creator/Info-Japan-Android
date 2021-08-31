@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Info Japan</title>
+      <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+      <link rel="stylesheet" href="app.css"/>
+  </head>
+  <body>
+    <nav>
+
+      <ul id="menu">
+            <li><a href="secondPage.html">MANGA</a></li>
+            <li><a href="thirdPage.html">About</a></li>
+            <li><a href="fourthPage.html">Contact</a></li>
+            <li><a href="fifthPage.html">OUR TEAM</a></li>
+      </ul>
+</nav>
+
+<div id="toggle">
+      <div class="span" id="one"></div>
+      <div class="span" id="two"></div>
+      <div class="span" id="three"></div>
+</div>
+
+<div id="resize">
+      <ul id="menu">
+            <li><a href="secondPage.html">MANGA</a></li>
+            <li><a href="ThirdPage.html">ANIME</a></li>
+            <li><a href="fourthPage.html">AKIHABARA</a></li>
+            <li><a href="fifthPage.html">OUR TEAM</a></li>
+      </ul>
+</div>
+
+      <div class="container">
+          <p>
+            Welcome! In this application you will find the answers to all your questions about the world of anime and manga.
+            At first it may seem quite difficult to remember all the information, but after a few days of studying it, you will have no trouble getting hired as the next Kadokawa executive :).
+            To access the information menu, you have to press the blue button on the top right, and once you do you will find the whole list containing the answers to your questions.
+            If you find this application useful, please give it a rating on the platform from where you downloaded it.
+            Also, if you have any problems or concerns, please contact us at the e-mail address below:
+            everyworkdeveloping@gmail.com
+
+          </p>
+      </div>
+      <header>
+          <h1>INFO JAPAN</h1>
+      </header>
+      <script>
+
+   $("#toggle").click(function() {
+
+   $(this).toggleClass('on');
+   $("#resize").toggleClass("active");
+
+   });
+   </script>
+  </body>
+</html>
