@@ -109,7 +109,7 @@ nav #menu li {
       line-height: 70px;
       position: relative;
       transition: all 0.3s ease-out;
-      margin-top: 30px;
+      margin-top: 25px;
 }
 
 nav #menu li a {
@@ -186,7 +186,7 @@ nav #menu li a {
 }
 
 #resize li:nth-child(1) {
-      margin-top:25px;
+      margin-top:0px;
 }
 
 #resize #menu li a {
