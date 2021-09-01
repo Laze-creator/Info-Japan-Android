@@ -109,6 +109,7 @@ nav #menu li {
       line-height: 70px;
       position: relative;
       transition: all 0.3s ease-out;
+      margin-top: 30px;
 }
 
 nav #menu li a {
